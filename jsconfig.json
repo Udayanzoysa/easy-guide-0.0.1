@@ -1,8 +1,15 @@
 {
-    "compilerOptions": {
-      "module": "ES6",
-      "jsx": "preserve",
-      "checkJs": false
-    },
-    "exclude": ["node_modules", "**/node_modules/*"]
-  }
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES6",
+    "jsx": "preserve",
+    "checkJs": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}
