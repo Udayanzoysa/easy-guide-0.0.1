@@ -47,7 +47,8 @@ const Addproduct = () => {
         setLoading(true)
         getDocFromCollection("department", id)
           .then((data) => {
-            setForm(data);
+            console.log(data, "rrrrrr");
+            setForm(Object.fromEntries(Object.entries(data).reverse()));
           })
           .finally(() => {
             setLoading(false);

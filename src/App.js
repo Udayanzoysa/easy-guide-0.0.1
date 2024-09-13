@@ -43,7 +43,7 @@ function App() {
             <Route path="/forgot-password" element={<Forgotpassword />} />
             <Route path="/admin" element={<MainLayout />}>
               <Route path=":id" element={<Addproduct />} />
-              <Route index element={<Dashboard />} />
+              {/* <Route index element={<Dashboard />} />
               <Route path="enquiries" element={<Enquiries />} />
               <Route path="blog-list" element={<Bloglist />} />
               <Route path="blog" element={<Addblog />} />
@@ -71,7 +71,7 @@ function App() {
               <Route path="profile" element={<Profile />} />
               <Route path="product" element={<Addproduct />}>
                 <Route path=":id" element={<Addproduct />} />
-              </Route>
+              </Route> */}
             </Route>
           </Routes>
         </Router>
