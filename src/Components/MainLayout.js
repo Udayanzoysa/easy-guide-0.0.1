@@ -45,8 +45,8 @@ const MainLayout = () => {
         <Sider trigger={null} collapsible collapsed={collapsed}>
           <div className="logo">
             <h2 className="text-white fs-5 text-center py-3 mb-0">
-              <span className="sm-logo">DGC</span>
-              <span className="lg-logo">Dushan Glass</span>
+              <span className="sm-logo">Easy Audit</span>
+              {/* <span className="lg-logo">Dushan Glass</span> */}
             </h2>
           </div>
           <Menu
@@ -81,43 +81,6 @@ const MainLayout = () => {
                     label: item,
                   })),
                 ],
-              },
-              // {
-              //   key: "orders",
-              //   icon: <FaClipboardList className="fs-4" />,
-              //   label: "Orders",
-              // },
-              {
-                  key: "blogs",
-                  icon: <FaBloggerB className="fs-4"/>,
-                  label: "Blogs",
-                  children: [
-                      {
-                          key: "blog",
-                          icon: <ImBlog className="fs-4"/>,
-                          label: "Add Blog",
-                      },
-                      {
-                          key: "blog-list",
-                          icon: <FaBloggerB className="fs-4"/>,
-                          label: "Blog List",
-                      },
-                      {
-                          key: "blog-category",
-                          icon: <ImBlog className="fs-4"/>,
-                          label: "Add Blog Category",
-                      },
-                      {
-                          key: "blog-category-list",
-                          icon: <FaBloggerB className="fs-4"/>,
-                          label: "Blog Category List",
-                      },
-                  ],
-              },
-              {
-                key: "enquiries",
-                icon: <FaClipboardList className="fs-4" />,
-                label: "Enquiries",
               },
             ]}
           />
