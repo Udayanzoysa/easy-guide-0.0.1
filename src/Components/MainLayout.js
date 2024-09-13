@@ -40,6 +40,25 @@ const MainLayout = () => {
         });
     },[])
 
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCollapsed(true); // Set collapsed to true on mobile view
+      } else {
+        setCollapsed(false); // Set collapsed to false on larger screens
+      }
+    };
+
+    useEffect(() => {
+      // Check screen size on initial render
+      handleResize();
+
+      // Listen for window resize events
+      window.addEventListener("resize", handleResize);
+
+      // Clean up the event listener
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
       <Layout>
         <Sider trigger={null} collapsible collapsed={collapsed}>

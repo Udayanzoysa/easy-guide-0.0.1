@@ -34,8 +34,8 @@ const Addproduct = () => {
     }
 
     Object.keys(form).map((item) => {
-        productSchemaTemplate[item] = string("This Field is required").required(
-          "This Field required"
+        productSchemaTemplate[item] = string(item + "this Field is required").required(
+          item + "this Field is required"
         );
     })
 
@@ -68,12 +68,12 @@ const Addproduct = () => {
               .then(() => {
                 updateDocOFCollection("department", id, { ...form })
                   .then(() => {
-                    toast.success("Updated Product successfully", {
+                    toast.success("Updated successfully", {
                       position: toast.POSITION.BOTTOM_CENTER,
                     });
                   })
                   .catch(() => {
-                    toast.error("Updated Product fails", {
+                    toast.error("Updated fails", {
                       position: toast.POSITION.BOTTOM_CENTER,
                     });
                   })
@@ -134,13 +134,3 @@ const Addproduct = () => {
 };
 
 export default Addproduct;
-
-let productSchema = object({
-    title: string('Title is required').required('Title is required'),
-    description: string('Description is required').required('Description is required'),
-    category: string('Category is required').required('Category is required'),
-    brand: string('Brand is required').required('Brand is required'),
-    colors: array().required("select at least one colour").typeError("select at least one colour").min(1, 'select at least one colour'),
-    quantity: string('Quantity is required').required('Quantity is required'),
-});
-
